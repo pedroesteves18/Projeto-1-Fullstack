@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+
 import reportWebVitals from './reportWebVitals';
 import Dados from './dados'
+import Resultados from './resultado'
+import {ResultadoProvider} from './ResultadoContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Dados />
+    <ResultadoProvider>
+      <Dados />
+      <Resultados />
+      </ResultadoProvider>
   </React.StrictMode>
 );
 
